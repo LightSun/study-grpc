@@ -27,6 +27,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 #grpc 1.22. download: https://github.com/LightSun/gRPC_windows
+#grpc-java plugin: https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/1.22.0/
 GRPC_DIR=E:\study\cpp\grpc_libs\MSVC142_32\Debug
 INCLUDEPATH += $${GRPC_DIR}/include
 LIBPATH += $${GRPC_DIR}/lib
