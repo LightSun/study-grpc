@@ -26,26 +26,42 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-#grpc
-INCLUDEPATH += E:\study\cpp\msys2_64\mingw32\include
-#LIBPATH += E:\study\cpp\grpc_dll2lib\grpc_libs_32
-#LIB_DIR = E:\study\cpp\grpc_dll2lib\grpc_libs_32
-LIB_DIR = E:\study\cpp\msys2_64\mingw32\lib
+#grpc 1.22. download: https://github.com/LightSun/gRPC_windows
+GRPC_DIR=E:\study\cpp\grpc_libs\MSVC142_32\Debug
+INCLUDEPATH += $${GRPC_DIR}/include
+LIBPATH += $${GRPC_DIR}/lib
 
-win32: LIBS += $${LIB_DIR}/libgpr.dll.a
-win32: LIBS += $${LIB_DIR}/libgrpc.dll.a
-win32: LIBS += $${LIB_DIR}/libgrpc_plugin_support.dll.a
-win32: LIBS += $${LIB_DIR}/libgrpc_unsecure.dll.a
-win32: LIBS += $${LIB_DIR}/libgrpc++.dll.a
-win32: LIBS += $${LIB_DIR}/libgrpc++_alts.dll.a
-win32: LIBS += $${LIB_DIR}/libgrpc++_error_details.dll.a
-win32: LIBS += $${LIB_DIR}/libgrpc++_reflection.dll.a
-win32: LIBS += $${LIB_DIR}/libgrpc++_unsecure.dll.a
-win32: LIBS += $${LIB_DIR}/libprotobuf.dll.a
-win32: LIBS += $${LIB_DIR}/libprotobuf-lite.dll.a
-win32: LIBS += $${LIB_DIR}/libprotoc.dll.a
-#win32: LIBS += -L$${LIB_DIR} -llibgrpc_plugin_support
+CONFIG(debug, debug|release){
+    LIBS +=  address_sorting.lib
+    LIBS +=  benchmark.lib
+    LIBS +=  benchmark_main.lib
+    LIBS +=  cares.lib
+    LIBS +=  crypto.lib
+    LIBS +=  decrepit.lib
+    LIBS +=  gflags_nothreads_static_debug.lib
+    LIBS +=  gpr.lib
+    LIBS +=  grpc.lib
+    LIBS +=  grpc_cronet.lib
+    LIBS +=  grpc_csharp_ext.lib
+    LIBS +=  grpc_plugin_support.lib
+    LIBS +=  grpc_unsecure.lib
 
+    LIBS +=  grpc++.lib
+    LIBS +=  grpc++_cronet.lib
+    LIBS +=  grpc++_error_details.lib
+    LIBS +=  grpc++_reflection.lib
+    LIBS +=  grpcpp_channelz.lib
+    LIBS +=  libprotobufd.lib
+    LIBS +=  libprotobuf-lited.lib
+    LIBS +=  libprotocd.lib
+    LIBS +=  ssl.lib
+    LIBS +=  zlibstaticd.lib
+}
+#grpc need '_WIN32_WINNT'
+DEFINES += _WIN32_WINNT=0x0A00
+#grpc depend on 'ws2_32,advapi32'
+LIBS += -lWs2_32
+LIBS += -ladvapi32
 
 HEADERS += \
     helloworld.grpc.pb.h \
