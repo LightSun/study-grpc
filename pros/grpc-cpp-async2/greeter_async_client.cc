@@ -112,9 +112,9 @@ extern "C" int main_client(int argc, char** argv) {
   // localhost at port 50051). We indicate that the channel isn't authenticated
   // (use of InsecureChannelCredentials()).
   GreeterClient greeter(grpc::CreateChannel(
-     // "localhost:50051", grpc::InsecureChannelCredentials()));
+      "localhost:50051", grpc::InsecureChannelCredentials()));
      // "server.natappfree.cc:35168", grpc::InsecureChannelCredentials()));
-      "edhf96.natappfree.cc:80", grpc::InsecureChannelCredentials()));
+     // "edhf96.natappfree.cc:80", grpc::InsecureChannelCredentials()));
   std::string user("world");
   std::string reply = greeter.SayHello(user);  // The actual RPC call!
   std::cout << "Greeter received: " << reply << std::endl;

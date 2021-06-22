@@ -10,4 +10,7 @@ cd /d %~dp0
 @rem java
 %ENV%/protoc.exe -I=. --java_out=java helloworld.proto
 %ENV%/protoc.exe -I=. --grpc_out=java --plugin=protoc-gen-grpc="protoc-gen-grpc-java-1.22.0-x86.exe" helloworld.proto
+@rem python
+%ENV%/protoc.exe -I=. --python_out=python helloworld.proto
+%ENV%/protoc.exe -I=. --grpc_out=python --plugin=protoc-gen-grpc="%ENV%/grpc_python_plugin.exe" helloworld.proto
 @PAUSE
