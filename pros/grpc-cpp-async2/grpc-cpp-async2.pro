@@ -30,25 +30,22 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 #grpc-java plugin: https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/1.22.0/
 
 #grpc
-GRPC_DIR=F:/cpp_builds/grpc_1.38.0_x86
+GRPC_DIR=F:\cpp_builds\grpc_1.38.0_x86_install
 INCLUDEPATH += $${GRPC_DIR}/include
-INCLUDEPATH += $${GRPC_DIR}/grpc\third_party\abseil-cpp
-INCLUDEPATH += $${GRPC_DIR}/grpc\third_party\protobuf\src
-#LIBPATH += $${GRPC_DIR}/lib
-LIBPATH += F:\cpp_builds\grpc_1.38.0_x86_cmake\Debug
+LIBPATH += $${GRPC_DIR}/lib
 #grpc need '_WIN32_WINNT'
 DEFINES += _WIN32_WINNT=0x0A00
 #DEFINES += _ITERATOR_DEBUG_LEVEL=2
 
-# the first release means build release mode.
-CONFIG(release, debug|release){
+# the first release means build release mode. debug means debug
+CONFIG(debug, debug|release){
     LIBS += address_sorting.lib
     LIBS += cares.lib
     LIBS += crypto.lib
 
     LIBS += gpr.lib
     LIBS += grpc.lib
-    LIBS += grpc_csharp_ext.lib
+    #LIBS += grpc_csharp_ext.lib
     LIBS += grpc_plugin_support.lib
     LIBS += grpc_unsecure.lib
 
@@ -59,15 +56,76 @@ CONFIG(release, debug|release){
     LIBS += grpc++_unsecure.lib
     LIBS += grpcpp_channelz.lib
 
-    LIBS += libprotobuf.lib
-    LIBS += libprotobuf-lite.lib
-    LIBS += libprotoc.lib
+    LIBS += libprotobufd.lib
+    LIBS += libprotobuf-lited.lib
+    LIBS += libprotocd.lib
+    LIBS += zlibstaticd.lib
 
     LIBS += re2.lib
-    LIBS += testing.lib
     LIBS += ssl.lib
     LIBS += upb.lib
-    LIBS += zlibstatic.lib
+
+    LIBS += absl_wyhash.lib
+    LIBS += absl_bad_any_cast_impl.lib
+    LIBS += absl_bad_optional_access.lib
+    LIBS += absl_bad_variant_access.lib
+    LIBS += absl_base.lib
+    LIBS += absl_city.lib
+    LIBS += absl_civil_time.lib
+    LIBS += absl_cord.lib
+    LIBS += absl_debugging_internal.lib
+    LIBS += absl_demangle_internal.lib
+    LIBS += absl_examine_stack.lib
+    LIBS += absl_exponential_biased.lib
+    LIBS += absl_failure_signal_handler.lib
+    LIBS += absl_flags.lib
+    LIBS += absl_flags_commandlineflag.lib
+    LIBS += absl_flags_commandlineflag_internal.lib
+    LIBS += absl_flags_config.lib
+    LIBS += absl_flags_internal.lib
+    LIBS += absl_flags_marshalling.lib
+    LIBS += absl_flags_parse.lib
+    LIBS += absl_flags_private_handle_accessor.lib
+    LIBS += absl_flags_program_name.lib
+    LIBS += absl_flags_reflection.lib
+    LIBS += absl_flags_usage.lib
+    LIBS += absl_flags_usage_internal.lib
+    LIBS += absl_graphcycles_internal.lib
+    LIBS += absl_hash.lib
+    LIBS += absl_hashtablez_sampler.lib
+    LIBS += absl_int128.lib
+    LIBS += absl_leak_check.lib
+    LIBS += absl_leak_check_disable.lib
+    LIBS += absl_log_severity.lib
+    LIBS += absl_malloc_internal.lib
+    LIBS += absl_periodic_sampler.lib
+    LIBS += absl_random_distributions.lib
+    LIBS += absl_random_internal_distribution_test_util.lib
+    LIBS += absl_random_internal_platform.lib
+    LIBS += absl_random_internal_pool_urbg.lib
+    LIBS += absl_random_internal_randen.lib
+    LIBS += absl_random_internal_randen_hwaes.lib
+    LIBS += absl_random_internal_randen_hwaes_impl.lib
+    LIBS += absl_random_internal_randen_slow.lib
+    LIBS += absl_random_internal_seed_material.lib
+    LIBS += absl_random_seed_gen_exception.lib
+    LIBS += absl_random_seed_sequences.lib
+    LIBS += absl_raw_hash_set.lib
+    LIBS += absl_raw_logging_internal.lib
+    LIBS += absl_scoped_set_env.lib
+    LIBS += absl_spinlock_wait.lib
+    LIBS += absl_stacktrace.lib
+    LIBS += absl_status.lib
+    LIBS += absl_statusor.lib
+    LIBS += absl_str_format_internal.lib
+    LIBS += absl_strerror.lib
+    LIBS += absl_strings.lib
+    LIBS += absl_strings_internal.lib
+    LIBS += absl_symbolize.lib
+    LIBS += absl_synchronization.lib
+    LIBS += absl_throw_delegate.lib
+    LIBS += absl_time.lib
+    LIBS += absl_time_zone.lib
 
     #grpc depend on 'ws2_32,advapi32'
     LIBS += -lWs2_32
