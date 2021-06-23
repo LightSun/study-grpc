@@ -30,40 +30,49 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 #grpc-java plugin: https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/1.22.0/
 
 #grpc
-GRPC_DIR=F:\cpp_builds\grpc_1.38.0_x86\Debug
+GRPC_DIR=F:/cpp_builds/grpc_1.38.0_x86
 INCLUDEPATH += $${GRPC_DIR}/include
-LIBS += $${GRPC_DIR}/lib address_sorting.lib
-#LIBS += $${GRPC_DIR}/lib benchmark.lib
-#LIBS += $${GRPC_DIR}/lib benchmark_main.lib
-#LIBS += $${GRPC_DIR}/lib cares.lib
-#LIBS += $${GRPC_DIR}/lib crypto.lib
-#LIBS += $${GRPC_DIR}/lib decrepit.lib
-#LIBS += $${GRPC_DIR}/lib gflags_nothreads_static_debug.lib
-LIBS += $${GRPC_DIR}/lib gpr.lib
-LIBS += $${GRPC_DIR}/lib grpc.lib
-#LIBS += $${GRPC_DIR}/lib grpc_cronet.lib
-LIBS += $${GRPC_DIR}/lib grpc_csharp_ext.lib
-LIBS += $${GRPC_DIR}/lib grpc_plugin_support.lib
-LIBS += $${GRPC_DIR}/lib grpc_unsecure.lib
-
-LIBS += $${GRPC_DIR}/lib grpc++.lib
-#LIBS += $${GRPC_DIR}/lib grpc++_cronet.lib
-LIBS += $${GRPC_DIR}/lib grpc++_alts.lib
-LIBS += $${GRPC_DIR}/lib grpc++_error_details.lib
-LIBS += $${GRPC_DIR}/lib grpc++_reflection.lib
-LIBS += $${GRPC_DIR}/lib grpc++_unsecure.lib
-LIBS += $${GRPC_DIR}/lib grpcpp_channelz.lib
-LIBS += $${GRPC_DIR}/lib upd.lib
-#LIBS += $${GRPC_DIR}/lib libprotobufd.lib
-#LIBS += $${GRPC_DIR}/lib libprotobuf-lited.lib
-#LIBS += $${GRPC_DIR}/lib libprotocd.lib
-#LIBS += $${GRPC_DIR}/lib ssl.lib
-#LIBS += $${GRPC_DIR}/lib zlibstaticd.lib
+INCLUDEPATH += $${GRPC_DIR}/grpc\third_party\abseil-cpp
+INCLUDEPATH += $${GRPC_DIR}/grpc\third_party\protobuf\src
+#LIBPATH += $${GRPC_DIR}/lib
+LIBPATH += F:\cpp_builds\grpc_1.38.0_x86_cmake\Debug
 #grpc need '_WIN32_WINNT'
 DEFINES += _WIN32_WINNT=0x0A00
-#grpc depend on 'ws2_32,advapi32'
-LIBS += -lWs2_32
-LIBS += -ladvapi32
+#DEFINES += _ITERATOR_DEBUG_LEVEL=2
+
+# the first release means build release mode.
+CONFIG(release, debug|release){
+    LIBS += address_sorting.lib
+    LIBS += cares.lib
+    LIBS += crypto.lib
+
+    LIBS += gpr.lib
+    LIBS += grpc.lib
+    LIBS += grpc_csharp_ext.lib
+    LIBS += grpc_plugin_support.lib
+    LIBS += grpc_unsecure.lib
+
+    LIBS += grpc++.lib
+    LIBS += grpc++_alts.lib
+    LIBS += grpc++_error_details.lib
+    LIBS += grpc++_reflection.lib
+    LIBS += grpc++_unsecure.lib
+    LIBS += grpcpp_channelz.lib
+
+    LIBS += libprotobuf.lib
+    LIBS += libprotobuf-lite.lib
+    LIBS += libprotoc.lib
+
+    LIBS += re2.lib
+    LIBS += testing.lib
+    LIBS += ssl.lib
+    LIBS += upb.lib
+    LIBS += zlibstatic.lib
+
+    #grpc depend on 'ws2_32,advapi32'
+    LIBS += -lWs2_32
+    LIBS += -ladvapi32
+}
 
 HEADERS += \
     helloworld.grpc.pb.h \
