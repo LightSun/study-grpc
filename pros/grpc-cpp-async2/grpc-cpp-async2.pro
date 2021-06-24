@@ -35,7 +35,6 @@ INCLUDEPATH += $${GRPC_DIR}/include
 LIBPATH += $${GRPC_DIR}/lib
 #grpc need '_WIN32_WINNT'
 DEFINES += _WIN32_WINNT=0x0A00
-#DEFINES += _ITERATOR_DEBUG_LEVEL=2
 
 # the first release means build release mode. debug means debug
 CONFIG(debug, debug|release){

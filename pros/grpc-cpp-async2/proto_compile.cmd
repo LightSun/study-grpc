@@ -5,6 +5,10 @@ SET ENV=F:\cpp_builds\grpc_1.38.0_x86_cmake\Debug
 SET JAVA_PROTOC_EXE=F:\cpp_builds\grpc_1.38.0_x86/protoc-gen-grpc-java-1.38.1-x86.exe
 @rem jump to current dir
 cd /d %~dp0
+mkdir java
+mkdir python
+@rem :%0 is the bat file. %1 is the real first param.
+@rem 'proto_compile.bat helloworld.proto' -> means %1 is the 'helloworld.proto'
 @rem cpp
 %ENV%/protoc.exe -I=. --cpp_out=. helloworld.proto
 %ENV%/protoc.exe -I=. --grpc_out=. --plugin=protoc-gen-grpc="%ENV%/grpc_cpp_plugin.exe" helloworld.proto

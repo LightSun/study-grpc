@@ -10,7 +10,7 @@ package io.grpc.examples.helloworld;
  *
  * Protobuf type {@code helloworld.HelloRequest}
  */
-public  final class HelloRequest extends
+public final class HelloRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:helloworld.HelloRequest)
     HelloRequestOrBuilder {
@@ -23,12 +23,12 @@ private static final long serialVersionUID = 0L;
     name_ = "";
   }
 
- /* @Override
+  @Override
   @SuppressWarnings({"unused"})
   protected Object newInstance(
       UnusedPrivateParameter unused) {
     return new HelloRequest();
-  }*/
+  }
 
   @Override
   public final com.google.protobuf.UnknownFieldSet
@@ -95,7 +95,9 @@ private static final long serialVersionUID = 0L;
   private volatile Object name_;
   /**
    * <code>string name = 1;</code>
+   * @return The name.
    */
+  @Override
   public String getName() {
     Object ref = name_;
     if (ref instanceof String) {
@@ -110,7 +112,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>string name = 1;</code>
+   * @return The bytes for name.
    */
+  @Override
   public com.google.protobuf.ByteString
       getNameBytes() {
     Object ref = name_;
@@ -434,6 +438,7 @@ private static final long serialVersionUID = 0L;
     private Object name_ = "";
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
     public String getName() {
       Object ref = name_;
@@ -449,6 +454,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -465,6 +471,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string name = 1;</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
      */
     public Builder setName(
         String value) {
@@ -478,6 +486,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string name = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearName() {
       
@@ -487,6 +496,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string name = 1;</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
