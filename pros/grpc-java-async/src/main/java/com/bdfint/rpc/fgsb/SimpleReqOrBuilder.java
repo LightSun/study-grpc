@@ -11,7 +11,7 @@ public interface SimpleReqOrBuilder extends
    * <code>string token = 1;</code>
    * @return The token.
    */
-  String getToken();
+  java.lang.String getToken();
   /**
    * <code>string token = 1;</code>
    * @return The bytes for token.
@@ -24,4 +24,44 @@ public interface SimpleReqOrBuilder extends
    * @return The type.
    */
   int getType();
+
+  /**
+   * <pre>
+   *卸料点id
+   * </pre>
+   *
+   * <code>string unloadingPointId = 3;</code>
+   * @return The unloadingPointId.
+   */
+  java.lang.String getUnloadingPointId();
+  /**
+   * <pre>
+   *卸料点id
+   * </pre>
+   *
+   * <code>string unloadingPointId = 3;</code>
+   * @return The bytes for unloadingPointId.
+   */
+  com.google.protobuf.ByteString
+      getUnloadingPointIdBytes();
+
+  /**
+   * <pre>
+   *识别单id
+   * </pre>
+   *
+   * <code>string recognizeSheetId = 4;</code>
+   * @return The recognizeSheetId.
+   */
+  java.lang.String getRecognizeSheetId();
+  /**
+   * <pre>
+   *识别单id
+   * </pre>
+   *
+   * <code>string recognizeSheetId = 4;</code>
+   * @return The bytes for recognizeSheetId.
+   */
+  com.google.protobuf.ByteString
+      getRecognizeSheetIdBytes();
 }

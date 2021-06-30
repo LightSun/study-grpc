@@ -17,16 +17,18 @@ private static final long serialVersionUID = 0L;
   }
   private SimpleReq() {
     token_ = "";
+    unloadingPointId_ = "";
+    recognizeSheetId_ = "";
   }
 
-  @Override
+  @java.lang.Override
   @SuppressWarnings({"unused"})
-  protected Object newInstance(
+  protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
     return new SimpleReq();
   }
 
-  @Override
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -37,7 +39,7 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
-      throw new NullPointerException();
+      throw new java.lang.NullPointerException();
     }
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -50,7 +52,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            String s = input.readStringRequireUtf8();
+            java.lang.String s = input.readStringRequireUtf8();
 
             token_ = s;
             break;
@@ -58,6 +60,18 @@ private static final long serialVersionUID = 0L;
           case 16: {
 
             type_ = input.readInt32();
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            unloadingPointId_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            recognizeSheetId_ = s;
             break;
           }
           default: {
@@ -81,32 +95,32 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return CameraControlProto.internal_static_fgsb_SimpleReq_descriptor;
+    return com.bdfint.rpc.fgsb.CameraControlProto.internal_static_fgsb_SimpleReq_descriptor;
   }
 
-  @Override
-  protected FieldAccessorTable
+  @java.lang.Override
+  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return CameraControlProto.internal_static_fgsb_SimpleReq_fieldAccessorTable
+    return com.bdfint.rpc.fgsb.CameraControlProto.internal_static_fgsb_SimpleReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            SimpleReq.class, Builder.class);
+            com.bdfint.rpc.fgsb.SimpleReq.class, com.bdfint.rpc.fgsb.SimpleReq.Builder.class);
   }
 
   public static final int TOKEN_FIELD_NUMBER = 1;
-  private volatile Object token_;
+  private volatile java.lang.Object token_;
   /**
    * <code>string token = 1;</code>
    * @return The token.
    */
-  @Override
-  public String getToken() {
-    Object ref = token_;
-    if (ref instanceof String) {
-      return (String) ref;
+  @java.lang.Override
+  public java.lang.String getToken() {
+    java.lang.Object ref = token_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      String s = bs.toStringUtf8();
+      java.lang.String s = bs.toStringUtf8();
       token_ = s;
       return s;
     }
@@ -115,14 +129,14 @@ private static final long serialVersionUID = 0L;
    * <code>string token = 1;</code>
    * @return The bytes for token.
    */
-  @Override
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getTokenBytes() {
-    Object ref = token_;
-    if (ref instanceof String) {
+    java.lang.Object ref = token_;
+    if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (String) ref);
+              (java.lang.String) ref);
       token_ = b;
       return b;
     } else {
@@ -136,13 +150,105 @@ private static final long serialVersionUID = 0L;
    * <code>int32 type = 2;</code>
    * @return The type.
    */
-  @Override
+  @java.lang.Override
   public int getType() {
     return type_;
   }
 
+  public static final int UNLOADINGPOINTID_FIELD_NUMBER = 3;
+  private volatile java.lang.Object unloadingPointId_;
+  /**
+   * <pre>
+   *卸料点id
+   * </pre>
+   *
+   * <code>string unloadingPointId = 3;</code>
+   * @return The unloadingPointId.
+   */
+  @java.lang.Override
+  public java.lang.String getUnloadingPointId() {
+    java.lang.Object ref = unloadingPointId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      unloadingPointId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *卸料点id
+   * </pre>
+   *
+   * <code>string unloadingPointId = 3;</code>
+   * @return The bytes for unloadingPointId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUnloadingPointIdBytes() {
+    java.lang.Object ref = unloadingPointId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      unloadingPointId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int RECOGNIZESHEETID_FIELD_NUMBER = 4;
+  private volatile java.lang.Object recognizeSheetId_;
+  /**
+   * <pre>
+   *识别单id
+   * </pre>
+   *
+   * <code>string recognizeSheetId = 4;</code>
+   * @return The recognizeSheetId.
+   */
+  @java.lang.Override
+  public java.lang.String getRecognizeSheetId() {
+    java.lang.Object ref = recognizeSheetId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      recognizeSheetId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *识别单id
+   * </pre>
+   *
+   * <code>string recognizeSheetId = 4;</code>
+   * @return The bytes for recognizeSheetId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getRecognizeSheetIdBytes() {
+    java.lang.Object ref = recognizeSheetId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      recognizeSheetId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
-  @Override
+  @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -152,7 +258,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @Override
+  @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getTokenBytes().isEmpty()) {
@@ -161,10 +267,16 @@ private static final long serialVersionUID = 0L;
     if (type_ != 0) {
       output.writeInt32(2, type_);
     }
+    if (!getUnloadingPointIdBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, unloadingPointId_);
+    }
+    if (!getRecognizeSheetIdBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, recognizeSheetId_);
+    }
     unknownFields.writeTo(output);
   }
 
-  @Override
+  @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -177,30 +289,40 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(2, type_);
     }
+    if (!getUnloadingPointIdBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, unloadingPointId_);
+    }
+    if (!getRecognizeSheetIdBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, recognizeSheetId_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
 
-  @Override
-  public boolean equals(final Object obj) {
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof SimpleReq)) {
+    if (!(obj instanceof com.bdfint.rpc.fgsb.SimpleReq)) {
       return super.equals(obj);
     }
-    SimpleReq other = (SimpleReq) obj;
+    com.bdfint.rpc.fgsb.SimpleReq other = (com.bdfint.rpc.fgsb.SimpleReq) obj;
 
     if (!getToken()
         .equals(other.getToken())) return false;
     if (getType()
         != other.getType()) return false;
+    if (!getUnloadingPointId()
+        .equals(other.getUnloadingPointId())) return false;
+    if (!getRecognizeSheetId()
+        .equals(other.getRecognizeSheetId())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
-  @Override
+  @java.lang.Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -211,74 +333,78 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getToken().hashCode();
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + getType();
+    hash = (37 * hash) + UNLOADINGPOINTID_FIELD_NUMBER;
+    hash = (53 * hash) + getUnloadingPointId().hashCode();
+    hash = (37 * hash) + RECOGNIZESHEETID_FIELD_NUMBER;
+    hash = (53 * hash) + getRecognizeSheetId().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static SimpleReq parseFrom(
+  public static com.bdfint.rpc.fgsb.SimpleReq parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static SimpleReq parseFrom(
+  public static com.bdfint.rpc.fgsb.SimpleReq parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static SimpleReq parseFrom(
+  public static com.bdfint.rpc.fgsb.SimpleReq parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static SimpleReq parseFrom(
+  public static com.bdfint.rpc.fgsb.SimpleReq parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static SimpleReq parseFrom(byte[] data)
+  public static com.bdfint.rpc.fgsb.SimpleReq parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static SimpleReq parseFrom(
+  public static com.bdfint.rpc.fgsb.SimpleReq parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static SimpleReq parseFrom(java.io.InputStream input)
+  public static com.bdfint.rpc.fgsb.SimpleReq parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static SimpleReq parseFrom(
+  public static com.bdfint.rpc.fgsb.SimpleReq parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static SimpleReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.bdfint.rpc.fgsb.SimpleReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static SimpleReq parseDelimitedFrom(
+  public static com.bdfint.rpc.fgsb.SimpleReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static SimpleReq parseFrom(
+  public static com.bdfint.rpc.fgsb.SimpleReq parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static SimpleReq parseFrom(
+  public static com.bdfint.rpc.fgsb.SimpleReq parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -286,23 +412,23 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  @Override
+  @java.lang.Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(SimpleReq prototype) {
+  public static Builder newBuilder(com.bdfint.rpc.fgsb.SimpleReq prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-  @Override
+  @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @Override
+  @java.lang.Override
   protected Builder newBuilderForType(
-      BuilderParent parent) {
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -312,18 +438,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:fgsb.SimpleReq)
-      SimpleReqOrBuilder {
+      com.bdfint.rpc.fgsb.SimpleReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return CameraControlProto.internal_static_fgsb_SimpleReq_descriptor;
+      return com.bdfint.rpc.fgsb.CameraControlProto.internal_static_fgsb_SimpleReq_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return CameraControlProto.internal_static_fgsb_SimpleReq_fieldAccessorTable
+      return com.bdfint.rpc.fgsb.CameraControlProto.internal_static_fgsb_SimpleReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SimpleReq.class, Builder.class);
+              com.bdfint.rpc.fgsb.SimpleReq.class, com.bdfint.rpc.fgsb.SimpleReq.Builder.class);
     }
 
     // Construct using com.bdfint.rpc.fgsb.SimpleReq.newBuilder()
@@ -332,7 +458,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private Builder(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -341,89 +467,95 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
-    @Override
+    @java.lang.Override
     public Builder clear() {
       super.clear();
       token_ = "";
 
       type_ = 0;
 
+      unloadingPointId_ = "";
+
+      recognizeSheetId_ = "";
+
       return this;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return CameraControlProto.internal_static_fgsb_SimpleReq_descriptor;
+      return com.bdfint.rpc.fgsb.CameraControlProto.internal_static_fgsb_SimpleReq_descriptor;
     }
 
-    @Override
-    public SimpleReq getDefaultInstanceForType() {
-      return SimpleReq.getDefaultInstance();
+    @java.lang.Override
+    public com.bdfint.rpc.fgsb.SimpleReq getDefaultInstanceForType() {
+      return com.bdfint.rpc.fgsb.SimpleReq.getDefaultInstance();
     }
 
-    @Override
-    public SimpleReq build() {
-      SimpleReq result = buildPartial();
+    @java.lang.Override
+    public com.bdfint.rpc.fgsb.SimpleReq build() {
+      com.bdfint.rpc.fgsb.SimpleReq result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    @Override
-    public SimpleReq buildPartial() {
-      SimpleReq result = new SimpleReq(this);
+    @java.lang.Override
+    public com.bdfint.rpc.fgsb.SimpleReq buildPartial() {
+      com.bdfint.rpc.fgsb.SimpleReq result = new com.bdfint.rpc.fgsb.SimpleReq(this);
       result.token_ = token_;
       result.type_ = type_;
+      result.unloadingPointId_ = unloadingPointId_;
+      result.recognizeSheetId_ = recognizeSheetId_;
       onBuilt();
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public Builder clone() {
       return super.clone();
     }
-    @Override
+    @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+        java.lang.Object value) {
       return super.setField(field, value);
     }
-    @Override
+    @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-    @Override
+    @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-    @Override
+    @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, Object value) {
+        int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-    @Override
+    @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+        java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-    @Override
+    @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof SimpleReq) {
-        return mergeFrom((SimpleReq)other);
+      if (other instanceof com.bdfint.rpc.fgsb.SimpleReq) {
+        return mergeFrom((com.bdfint.rpc.fgsb.SimpleReq)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(SimpleReq other) {
-      if (other == SimpleReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.bdfint.rpc.fgsb.SimpleReq other) {
+      if (other == com.bdfint.rpc.fgsb.SimpleReq.getDefaultInstance()) return this;
       if (!other.getToken().isEmpty()) {
         token_ = other.token_;
         onChanged();
@@ -431,26 +563,34 @@ private static final long serialVersionUID = 0L;
       if (other.getType() != 0) {
         setType(other.getType());
       }
+      if (!other.getUnloadingPointId().isEmpty()) {
+        unloadingPointId_ = other.unloadingPointId_;
+        onChanged();
+      }
+      if (!other.getRecognizeSheetId().isEmpty()) {
+        recognizeSheetId_ = other.recognizeSheetId_;
+        onChanged();
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
 
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      SimpleReq parsedMessage = null;
+      com.bdfint.rpc.fgsb.SimpleReq parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (SimpleReq) e.getUnfinishedMessage();
+        parsedMessage = (com.bdfint.rpc.fgsb.SimpleReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -460,21 +600,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private Object token_ = "";
+    private java.lang.Object token_ = "";
     /**
      * <code>string token = 1;</code>
      * @return The token.
      */
-    public String getToken() {
-      Object ref = token_;
-      if (!(ref instanceof String)) {
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         token_ = s;
         return s;
       } else {
-        return (String) ref;
+        return (java.lang.String) ref;
       }
     }
     /**
@@ -483,11 +623,11 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ByteString
         getTokenBytes() {
-      Object ref = token_;
+      java.lang.Object ref = token_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         token_ = b;
         return b;
       } else {
@@ -500,7 +640,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setToken(
-        String value) {
+        java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -541,7 +681,7 @@ private static final long serialVersionUID = 0L;
      * <code>int32 type = 2;</code>
      * @return The type.
      */
-    @Override
+    @java.lang.Override
     public int getType() {
       return type_;
     }
@@ -566,13 +706,205 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
-    @Override
+
+    private java.lang.Object unloadingPointId_ = "";
+    /**
+     * <pre>
+     *卸料点id
+     * </pre>
+     *
+     * <code>string unloadingPointId = 3;</code>
+     * @return The unloadingPointId.
+     */
+    public java.lang.String getUnloadingPointId() {
+      java.lang.Object ref = unloadingPointId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        unloadingPointId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *卸料点id
+     * </pre>
+     *
+     * <code>string unloadingPointId = 3;</code>
+     * @return The bytes for unloadingPointId.
+     */
+    public com.google.protobuf.ByteString
+        getUnloadingPointIdBytes() {
+      java.lang.Object ref = unloadingPointId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        unloadingPointId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *卸料点id
+     * </pre>
+     *
+     * <code>string unloadingPointId = 3;</code>
+     * @param value The unloadingPointId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUnloadingPointId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      unloadingPointId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *卸料点id
+     * </pre>
+     *
+     * <code>string unloadingPointId = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUnloadingPointId() {
+      
+      unloadingPointId_ = getDefaultInstance().getUnloadingPointId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *卸料点id
+     * </pre>
+     *
+     * <code>string unloadingPointId = 3;</code>
+     * @param value The bytes for unloadingPointId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUnloadingPointIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      unloadingPointId_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object recognizeSheetId_ = "";
+    /**
+     * <pre>
+     *识别单id
+     * </pre>
+     *
+     * <code>string recognizeSheetId = 4;</code>
+     * @return The recognizeSheetId.
+     */
+    public java.lang.String getRecognizeSheetId() {
+      java.lang.Object ref = recognizeSheetId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recognizeSheetId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     *识别单id
+     * </pre>
+     *
+     * <code>string recognizeSheetId = 4;</code>
+     * @return The bytes for recognizeSheetId.
+     */
+    public com.google.protobuf.ByteString
+        getRecognizeSheetIdBytes() {
+      java.lang.Object ref = recognizeSheetId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recognizeSheetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *识别单id
+     * </pre>
+     *
+     * <code>string recognizeSheetId = 4;</code>
+     * @param value The recognizeSheetId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRecognizeSheetId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      recognizeSheetId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *识别单id
+     * </pre>
+     *
+     * <code>string recognizeSheetId = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRecognizeSheetId() {
+      
+      recognizeSheetId_ = getDefaultInstance().getRecognizeSheetId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *识别单id
+     * </pre>
+     *
+     * <code>string recognizeSheetId = 4;</code>
+     * @param value The bytes for recognizeSheetId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRecognizeSheetIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      recognizeSheetId_ = value;
+      onChanged();
+      return this;
+    }
+    @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
-    @Override
+    @java.lang.Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -583,18 +915,18 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:fgsb.SimpleReq)
-  private static final SimpleReq DEFAULT_INSTANCE;
+  private static final com.bdfint.rpc.fgsb.SimpleReq DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new SimpleReq();
+    DEFAULT_INSTANCE = new com.bdfint.rpc.fgsb.SimpleReq();
   }
 
-  public static SimpleReq getDefaultInstance() {
+  public static com.bdfint.rpc.fgsb.SimpleReq getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
   private static final com.google.protobuf.Parser<SimpleReq>
       PARSER = new com.google.protobuf.AbstractParser<SimpleReq>() {
-    @Override
+    @java.lang.Override
     public SimpleReq parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -607,13 +939,13 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
-  @Override
+  @java.lang.Override
   public com.google.protobuf.Parser<SimpleReq> getParserForType() {
     return PARSER;
   }
 
-  @Override
-  public SimpleReq getDefaultInstanceForType() {
+  @java.lang.Override
+  public com.bdfint.rpc.fgsb.SimpleReq getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

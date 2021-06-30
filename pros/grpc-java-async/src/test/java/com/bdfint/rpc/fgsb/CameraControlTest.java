@@ -58,6 +58,8 @@ public class CameraControlTest {
             SimpleReq req = SimpleReq.newBuilder()
                     .setType(type)
                     .setToken(token)
+                    .setRecognizeSheetId("---")  //识别单id
+                    .setUnloadingPointId("xxx")  //卸料点id
                     .build();
             ResInfo res;
             try {

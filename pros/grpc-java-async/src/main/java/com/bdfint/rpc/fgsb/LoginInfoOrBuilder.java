@@ -11,7 +11,7 @@ public interface LoginInfoOrBuilder extends
    * <code>string username = 1;</code>
    * @return The username.
    */
-  String getUsername();
+  java.lang.String getUsername();
   /**
    * <code>string username = 1;</code>
    * @return The bytes for username.
@@ -23,7 +23,7 @@ public interface LoginInfoOrBuilder extends
    * <code>string password = 2;</code>
    * @return The password.
    */
-  String getPassword();
+  java.lang.String getPassword();
   /**
    * <code>string password = 2;</code>
    * @return The bytes for password.

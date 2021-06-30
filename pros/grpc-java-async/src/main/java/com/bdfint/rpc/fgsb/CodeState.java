@@ -4,61 +4,37 @@
 package com.bdfint.rpc.fgsb;
 
 /**
- * Protobuf enum {@code fgsb.SimpleReqType}
+ * Protobuf enum {@code fgsb.CodeState}
  */
-public enum SimpleReqType
+public enum CodeState
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <pre>
-   *proto3. first must be 0, and other should not be same
-   * </pre>
-   *
-   * <code>Start_PTZ = 0;</code>
+   * <code>SUCCESS = 0;</code>
    */
-  Start_PTZ(0),
+  SUCCESS(0),
   /**
-   * <pre>
-   *吸盘检测
-   * </pre>
-   *
-   * <code>Start_Sucker_Detection = 1;</code>
+   * <code>TOKEN_INVALID = 1;</code>
    */
-  Start_Sucker_Detection(1),
+  TOKEN_INVALID(1),
   /**
-   * <pre>
-   *警示灯服务	
-   * </pre>
-   *
-   * <code>WARNING_LIGHT_SERVICE = 2;</code>
+   * <code>ACCOUNT_PWD_ERROR = 2;</code>
    */
-  WARNING_LIGHT_SERVICE(2),
+  ACCOUNT_PWD_ERROR(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <pre>
-   *proto3. first must be 0, and other should not be same
-   * </pre>
-   *
-   * <code>Start_PTZ = 0;</code>
+   * <code>SUCCESS = 0;</code>
    */
-  public static final int Start_PTZ_VALUE = 0;
+  public static final int SUCCESS_VALUE = 0;
   /**
-   * <pre>
-   *吸盘检测
-   * </pre>
-   *
-   * <code>Start_Sucker_Detection = 1;</code>
+   * <code>TOKEN_INVALID = 1;</code>
    */
-  public static final int Start_Sucker_Detection_VALUE = 1;
+  public static final int TOKEN_INVALID_VALUE = 1;
   /**
-   * <pre>
-   *警示灯服务	
-   * </pre>
-   *
-   * <code>WARNING_LIGHT_SERVICE = 2;</code>
+   * <code>ACCOUNT_PWD_ERROR = 2;</code>
    */
-  public static final int WARNING_LIGHT_SERVICE_VALUE = 2;
+  public static final int ACCOUNT_PWD_ERROR_VALUE = 2;
 
 
   public final int getNumber() {
@@ -75,7 +51,7 @@ public enum SimpleReqType
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static SimpleReqType valueOf(int value) {
+  public static CodeState valueOf(int value) {
     return forNumber(value);
   }
 
@@ -83,24 +59,24 @@ public enum SimpleReqType
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static SimpleReqType forNumber(int value) {
+  public static CodeState forNumber(int value) {
     switch (value) {
-      case 0: return Start_PTZ;
-      case 1: return Start_Sucker_Detection;
-      case 2: return WARNING_LIGHT_SERVICE;
+      case 0: return SUCCESS;
+      case 1: return TOKEN_INVALID;
+      case 2: return ACCOUNT_PWD_ERROR;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<SimpleReqType>
+  public static com.google.protobuf.Internal.EnumLiteMap<CodeState>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      SimpleReqType> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<SimpleReqType>() {
-          public SimpleReqType findValueByNumber(int number) {
-            return SimpleReqType.forNumber(number);
+      CodeState> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<CodeState>() {
+          public CodeState findValueByNumber(int number) {
+            return CodeState.forNumber(number);
           }
         };
 
@@ -118,12 +94,12 @@ public enum SimpleReqType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.bdfint.rpc.fgsb.CameraControlProto.getDescriptor().getEnumTypes().get(0);
+    return com.bdfint.rpc.fgsb.CameraControlProto.getDescriptor().getEnumTypes().get(1);
   }
 
-  private static final SimpleReqType[] VALUES = values();
+  private static final CodeState[] VALUES = values();
 
-  public static SimpleReqType valueOf(
+  public static CodeState valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -137,10 +113,10 @@ public enum SimpleReqType
 
   private final int value;
 
-  private SimpleReqType(int value) {
+  private CodeState(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:fgsb.SimpleReqType)
+  // @@protoc_insertion_point(enum_scope:fgsb.CodeState)
 }
 

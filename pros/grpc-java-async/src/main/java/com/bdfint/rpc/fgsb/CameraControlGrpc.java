@@ -14,29 +14,29 @@ public final class CameraControlGrpc {
   public static final String SERVICE_NAME = "fgsb.CameraControl";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<LoginInfo,
-      ResInfo> getLoginMethod;
+  private static volatile io.grpc.MethodDescriptor<com.bdfint.rpc.fgsb.LoginInfo,
+      com.bdfint.rpc.fgsb.ResInfo> getLoginMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Login",
-      requestType = LoginInfo.class,
-      responseType = ResInfo.class,
+      requestType = com.bdfint.rpc.fgsb.LoginInfo.class,
+      responseType = com.bdfint.rpc.fgsb.ResInfo.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<LoginInfo,
-      ResInfo> getLoginMethod() {
-    io.grpc.MethodDescriptor<LoginInfo, ResInfo> getLoginMethod;
+  public static io.grpc.MethodDescriptor<com.bdfint.rpc.fgsb.LoginInfo,
+      com.bdfint.rpc.fgsb.ResInfo> getLoginMethod() {
+    io.grpc.MethodDescriptor<com.bdfint.rpc.fgsb.LoginInfo, com.bdfint.rpc.fgsb.ResInfo> getLoginMethod;
     if ((getLoginMethod = CameraControlGrpc.getLoginMethod) == null) {
       synchronized (CameraControlGrpc.class) {
         if ((getLoginMethod = CameraControlGrpc.getLoginMethod) == null) {
           CameraControlGrpc.getLoginMethod = getLoginMethod =
-              io.grpc.MethodDescriptor.<LoginInfo, ResInfo>newBuilder()
+              io.grpc.MethodDescriptor.<com.bdfint.rpc.fgsb.LoginInfo, com.bdfint.rpc.fgsb.ResInfo>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Login"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  LoginInfo.getDefaultInstance()))
+                  com.bdfint.rpc.fgsb.LoginInfo.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ResInfo.getDefaultInstance()))
+                  com.bdfint.rpc.fgsb.ResInfo.getDefaultInstance()))
               .setSchemaDescriptor(new CameraControlMethodDescriptorSupplier("Login"))
               .build();
         }
@@ -45,29 +45,29 @@ public final class CameraControlGrpc {
     return getLoginMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<SimpleReq,
-      ResInfo> getCallMethod;
+  private static volatile io.grpc.MethodDescriptor<com.bdfint.rpc.fgsb.SimpleReq,
+      com.bdfint.rpc.fgsb.ResInfo> getCallMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "call",
-      requestType = SimpleReq.class,
-      responseType = ResInfo.class,
+      requestType = com.bdfint.rpc.fgsb.SimpleReq.class,
+      responseType = com.bdfint.rpc.fgsb.ResInfo.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<SimpleReq,
-      ResInfo> getCallMethod() {
-    io.grpc.MethodDescriptor<SimpleReq, ResInfo> getCallMethod;
+  public static io.grpc.MethodDescriptor<com.bdfint.rpc.fgsb.SimpleReq,
+      com.bdfint.rpc.fgsb.ResInfo> getCallMethod() {
+    io.grpc.MethodDescriptor<com.bdfint.rpc.fgsb.SimpleReq, com.bdfint.rpc.fgsb.ResInfo> getCallMethod;
     if ((getCallMethod = CameraControlGrpc.getCallMethod) == null) {
       synchronized (CameraControlGrpc.class) {
         if ((getCallMethod = CameraControlGrpc.getCallMethod) == null) {
           CameraControlGrpc.getCallMethod = getCallMethod =
-              io.grpc.MethodDescriptor.<SimpleReq, ResInfo>newBuilder()
+              io.grpc.MethodDescriptor.<com.bdfint.rpc.fgsb.SimpleReq, com.bdfint.rpc.fgsb.ResInfo>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "call"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  SimpleReq.getDefaultInstance()))
+                  com.bdfint.rpc.fgsb.SimpleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ResInfo.getDefaultInstance()))
+                  com.bdfint.rpc.fgsb.ResInfo.getDefaultInstance()))
               .setSchemaDescriptor(new CameraControlMethodDescriptorSupplier("call"))
               .build();
         }
@@ -82,7 +82,7 @@ public final class CameraControlGrpc {
   public static CameraControlStub newStub(io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<CameraControlStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<CameraControlStub>() {
-        @Override
+        @java.lang.Override
         public CameraControlStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new CameraControlStub(channel, callOptions);
         }
@@ -97,7 +97,7 @@ public final class CameraControlGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<CameraControlBlockingStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<CameraControlBlockingStub>() {
-        @Override
+        @java.lang.Override
         public CameraControlBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new CameraControlBlockingStub(channel, callOptions);
         }
@@ -112,7 +112,7 @@ public final class CameraControlGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<CameraControlFutureStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<CameraControlFutureStub>() {
-        @Override
+        @java.lang.Override
         public CameraControlFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new CameraControlFutureStub(channel, callOptions);
         }
@@ -126,33 +126,33 @@ public final class CameraControlGrpc {
 
     /**
      */
-    public void login(LoginInfo request,
-                      io.grpc.stub.StreamObserver<ResInfo> responseObserver) {
+    public void login(com.bdfint.rpc.fgsb.LoginInfo request,
+        io.grpc.stub.StreamObserver<com.bdfint.rpc.fgsb.ResInfo> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoginMethod(), responseObserver);
     }
 
     /**
      */
-    public void call(SimpleReq request,
-                     io.grpc.stub.StreamObserver<ResInfo> responseObserver) {
+    public void call(com.bdfint.rpc.fgsb.SimpleReq request,
+        io.grpc.stub.StreamObserver<com.bdfint.rpc.fgsb.ResInfo> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallMethod(), responseObserver);
     }
 
-    @Override public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getLoginMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                LoginInfo,
-                ResInfo>(
+                com.bdfint.rpc.fgsb.LoginInfo,
+                com.bdfint.rpc.fgsb.ResInfo>(
                   this, METHODID_LOGIN)))
           .addMethod(
             getCallMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                SimpleReq,
-                ResInfo>(
+                com.bdfint.rpc.fgsb.SimpleReq,
+                com.bdfint.rpc.fgsb.ResInfo>(
                   this, METHODID_CALL)))
           .build();
     }
@@ -166,7 +166,7 @@ public final class CameraControlGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected CameraControlStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CameraControlStub(channel, callOptions);
@@ -174,16 +174,16 @@ public final class CameraControlGrpc {
 
     /**
      */
-    public void login(LoginInfo request,
-                      io.grpc.stub.StreamObserver<ResInfo> responseObserver) {
+    public void login(com.bdfint.rpc.fgsb.LoginInfo request,
+        io.grpc.stub.StreamObserver<com.bdfint.rpc.fgsb.ResInfo> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void call(SimpleReq request,
-                     io.grpc.stub.StreamObserver<ResInfo> responseObserver) {
+    public void call(com.bdfint.rpc.fgsb.SimpleReq request,
+        io.grpc.stub.StreamObserver<com.bdfint.rpc.fgsb.ResInfo> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCallMethod(), getCallOptions()), request, responseObserver);
     }
@@ -197,7 +197,7 @@ public final class CameraControlGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected CameraControlBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CameraControlBlockingStub(channel, callOptions);
@@ -205,14 +205,14 @@ public final class CameraControlGrpc {
 
     /**
      */
-    public ResInfo login(LoginInfo request) {
+    public com.bdfint.rpc.fgsb.ResInfo login(com.bdfint.rpc.fgsb.LoginInfo request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLoginMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public ResInfo call(SimpleReq request) {
+    public com.bdfint.rpc.fgsb.ResInfo call(com.bdfint.rpc.fgsb.SimpleReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCallMethod(), getCallOptions(), request);
     }
@@ -226,7 +226,7 @@ public final class CameraControlGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected CameraControlFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CameraControlFutureStub(channel, callOptions);
@@ -234,16 +234,16 @@ public final class CameraControlGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ResInfo> login(
-        LoginInfo request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.bdfint.rpc.fgsb.ResInfo> login(
+        com.bdfint.rpc.fgsb.LoginInfo request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ResInfo> call(
-        SimpleReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.bdfint.rpc.fgsb.ResInfo> call(
+        com.bdfint.rpc.fgsb.SimpleReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCallMethod(), getCallOptions()), request);
     }
@@ -265,25 +265,25 @@ public final class CameraControlGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_LOGIN:
-          serviceImpl.login((LoginInfo) request,
-              (io.grpc.stub.StreamObserver<ResInfo>) responseObserver);
+          serviceImpl.login((com.bdfint.rpc.fgsb.LoginInfo) request,
+              (io.grpc.stub.StreamObserver<com.bdfint.rpc.fgsb.ResInfo>) responseObserver);
           break;
         case METHODID_CALL:
-          serviceImpl.call((SimpleReq) request,
-              (io.grpc.stub.StreamObserver<ResInfo>) responseObserver);
+          serviceImpl.call((com.bdfint.rpc.fgsb.SimpleReq) request,
+              (io.grpc.stub.StreamObserver<com.bdfint.rpc.fgsb.ResInfo>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -297,12 +297,12 @@ public final class CameraControlGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     CameraControlBaseDescriptorSupplier() {}
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return CameraControlProto.getDescriptor();
+      return com.bdfint.rpc.fgsb.CameraControlProto.getDescriptor();
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("CameraControl");
     }
@@ -322,7 +322,7 @@ public final class CameraControlGrpc {
       this.methodName = methodName;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }

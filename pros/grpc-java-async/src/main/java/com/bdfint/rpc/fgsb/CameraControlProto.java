@@ -37,14 +37,17 @@ public final class CameraControlProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
-      "\n\023CameraControl.proto\022\004fgsb\"(\n\tSimpleReq" +
-      "\022\r\n\005token\030\001 \001(\t\022\014\n\004type\030\002 \001(\005\"/\n\tLoginIn" +
-      "fo\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"3" +
-      "\n\007ResInfo\022\014\n\004code\030\001 \001(\005\022\013\n\003msg\030\002 \001(\t\022\r\n\005" +
-      "token\030\003 \001(\t*U\n\rSimpleReqType\022\r\n\tStart_PT" +
-      "Z\020\000\022\032\n\026Start_Sucker_Detection\020\001\022\031\n\025WARNI" +
-      "NG_LIGHT_SERVICE\020\0022d\n\rCameraControl\022)\n\005L" +
+    java.lang.String[] descriptorData = {
+      "\n\023CameraControl.proto\022\004fgsb\"\\\n\tSimpleReq" +
+      "\022\r\n\005token\030\001 \001(\t\022\014\n\004type\030\002 \001(\005\022\030\n\020unloadi" +
+      "ngPointId\030\003 \001(\t\022\030\n\020recognizeSheetId\030\004 \001(" +
+      "\t\"/\n\tLoginInfo\022\020\n\010username\030\001 \001(\t\022\020\n\010pass" +
+      "word\030\002 \001(\t\"3\n\007ResInfo\022\014\n\004code\030\001 \001(\005\022\013\n\003m" +
+      "sg\030\002 \001(\t\022\r\n\005token\030\003 \001(\t*U\n\rSimpleReqType" +
+      "\022\r\n\tStart_PTZ\020\000\022\032\n\026Start_Sucker_Detectio" +
+      "n\020\001\022\031\n\025WARNING_LIGHT_SERVICE\020\002*B\n\tCodeSt" +
+      "ate\022\013\n\007SUCCESS\020\000\022\021\n\rTOKEN_INVALID\020\001\022\025\n\021A" +
+      "CCOUNT_PWD_ERROR\020\0022d\n\rCameraControl\022)\n\005L" +
       "ogin\022\017.fgsb.LoginInfo\032\r.fgsb.ResInfo\"\000\022(" +
       "\n\004call\022\017.fgsb.SimpleReq\032\r.fgsb.ResInfo\"\000" +
       "B0\n\023com.bdfint.rpc.fgsbB\022CameraControlPr" +
@@ -59,19 +62,19 @@ public final class CameraControlProto {
     internal_static_fgsb_SimpleReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_fgsb_SimpleReq_descriptor,
-        new String[] { "Token", "Type", });
+        new java.lang.String[] { "Token", "Type", "UnloadingPointId", "RecognizeSheetId", });
     internal_static_fgsb_LoginInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_fgsb_LoginInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_fgsb_LoginInfo_descriptor,
-        new String[] { "Username", "Password", });
+        new java.lang.String[] { "Username", "Password", });
     internal_static_fgsb_ResInfo_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_fgsb_ResInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_fgsb_ResInfo_descriptor,
-        new String[] { "Code", "Msg", "Token", });
+        new java.lang.String[] { "Code", "Msg", "Token", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
