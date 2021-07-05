@@ -7,9 +7,9 @@ import grpc
 import  CameraAI_pb2
 import  CameraAI_pb2_grpc
 
-class Greeter(CameraAI_pb2_grpc.GreeterServicer):
+class Greeter(CameraAI_pb2_grpc.CameraAIServicer):
 
-    async def SayHello(
+    async def GetResult(
             self, request: CameraAI_pb2.AIReq,
             context: grpc.aio.ServicerContext) -> CameraAI_pb2.AIRes:
         # (CameraAI_pb2.AIKeyInfo) keyInfo = request.keyInfo;
@@ -27,7 +27,7 @@ class Greeter(CameraAI_pb2_grpc.GreeterServicer):
 
 async def serve() -> None:
     server = grpc.aio.server()
-    CameraAI_pb2_grpc.add_GreeterServicer_to_server(Greeter(), server)
+    CameraAI_pb2_grpc.add_CameraAIServicer_to_server(Greeter(), server)
     listen_addr = '[::]:50051'
     server.add_insecure_port(listen_addr)
     logging.info("Starting server on %s", listen_addr)
