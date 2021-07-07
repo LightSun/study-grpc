@@ -2,7 +2,10 @@ io/grpc/examples/helloworld/HelloWorldServer.java
  io.grpc.examples.helloworld.HelloWorldServer
  io.grpc.examples.helloworld.HelloWorldServer$1
  io.grpc.examples.helloworld.HelloWorldServer$GreeterImpl
-io/grpc/examples/helloworld/HelloWorldClient.java
- io.grpc.examples.helloworld.HelloWorldClient
 io/grpc/examples/helloworld/TestHelloWorldClient.java
  io.grpc.examples.helloworld.TestHelloWorldClient
+io/grpc/examples/helloworld/HelloWorldClient.java
+ io.grpc.examples.helloworld.HelloWorldClient
+com/bdfint/rpc/fgsb/CameraControlTest.java
+ com.bdfint.rpc.fgsb.CameraControlTest
+ com.bdfint.rpc.fgsb.CameraControlTest$CameraControlClient

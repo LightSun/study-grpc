@@ -1,5 +1,6 @@
 package com.bdfint.rpc.fgsb;
 
+import com.bdfint.base.sys.util.asuync.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.StatusRuntimeException;
@@ -44,6 +45,7 @@ public class CameraControlTest {
             LOGGER.info("Will try to login "  + " ...");
             LoginInfo info = LoginInfo.newBuilder().setUsername("google/heaven7")
                     .setPassword("123456")
+                    .setCameraAddr("21")
                     .build();
             ResInfo res;
             try {
@@ -60,6 +62,7 @@ public class CameraControlTest {
                     .setToken(token)
                     .setRecognizeSheetId("---")  //识别单id
                     .setUnloadingPointId("xxx")  //卸料点id
+                    .setCameraAddr("21")
                     .build();
             ResInfo res;
             try {
