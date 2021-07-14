@@ -40,9 +40,9 @@ public class CameraControlTest {
         public void shutdown() throws InterruptedException{
             //channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
             // Close the gRPC managed-channel if not shut down already.
-            if (!managedChannel.isShutdown()) {
+            if (!channel.isShutdown()) {
               try {
-                managedChannel.shutdown();
+                channel.shutdown();
                 if (!managedChannel.awaitTermination(45, TimeUnit.SECONDS)) {
                   LOG.warn("Timed out gracefully shutting down connection: {}. ", managedChannel);
                 }
@@ -52,10 +52,10 @@ public class CameraControlTest {
             }
 
             // Forceful shut down if still not terminated.
-            if (!managedChannel.isTerminated()) {
+            if (!channel.isTerminated()) {
               try {
-                managedChannel.shutdownNow();
-                if (!managedChannel.awaitTermination(15, TimeUnit.SECONDS)) {
+                channel.shutdownNow();
+                if (!channel.awaitTermination(15, TimeUnit.SECONDS)) {
                   LOG.warn("Timed out forcefully shutting down connection: {}. ", managedChannel);
                 }
               } catch (Exception e) {
