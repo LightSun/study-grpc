@@ -38,8 +38,30 @@ public class CameraControlTest {
         }
 
         public void shutdown() throws InterruptedException{
-            channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
-        }
+            //channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
+            // Close the gRPC managed-channel if not shut down already.
+            if (!managedChannel.isShutdown()) {
+              try {
+                managedChannel.shutdown();
+                if (!managedChannel.awaitTermination(45, TimeUnit.SECONDS)) {
+                  LOG.warn("Timed out gracefully shutting down connection: {}. ", managedChannel);
+                }
+              } catch (Exception e) {
+                LOG.error("Unexpected exception while waiting for channel termination", e);
+              }
+            }
+
+            // Forceful shut down if still not terminated.
+            if (!managedChannel.isTerminated()) {
+              try {
+                managedChannel.shutdownNow();
+                if (!managedChannel.awaitTermination(15, TimeUnit.SECONDS)) {
+                  LOG.warn("Timed out forcefully shutting down connection: {}. ", managedChannel);
+                }
+              } catch (Exception e) {
+                LOG.error("Unexpected exception while waiting for channel termination", e);
+              }
+      }
 
         public void login(){
             LOGGER.info("Will try to login "  + " ...");
