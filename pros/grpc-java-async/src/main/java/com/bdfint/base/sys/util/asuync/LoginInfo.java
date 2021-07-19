@@ -21,14 +21,14 @@ private static final long serialVersionUID = 0L;
     cameraAddr_ = "";
   }
 
-  @java.lang.Override
+  @Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
+  protected Object newInstance(
       UnusedPrivateParameter unused) {
     return new LoginInfo();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -39,7 +39,7 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException();
     }
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -52,19 +52,19 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             username_ = s;
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             password_ = s;
             break;
           }
           case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             cameraAddr_ = s;
             break;
@@ -90,32 +90,32 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.bdfint.base.sys.util.asuync.CameraControlProto.internal_static_fgsb_LoginInfo_descriptor;
+    return CameraControlProto.internal_static_fgsb_LoginInfo_descriptor;
   }
 
-  @java.lang.Override
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  @Override
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.bdfint.base.sys.util.asuync.CameraControlProto.internal_static_fgsb_LoginInfo_fieldAccessorTable
+    return CameraControlProto.internal_static_fgsb_LoginInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.bdfint.base.sys.util.asuync.LoginInfo.class, com.bdfint.base.sys.util.asuync.LoginInfo.Builder.class);
+            LoginInfo.class, Builder.class);
   }
 
   public static final int USERNAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object username_;
+  private volatile Object username_;
   /**
    * <code>string username = 1;</code>
    * @return The username.
    */
-  @java.lang.Override
-  public java.lang.String getUsername() {
-    java.lang.Object ref = username_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  @Override
+  public String getUsername() {
+    Object ref = username_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       username_ = s;
       return s;
     }
@@ -124,14 +124,14 @@ private static final long serialVersionUID = 0L;
    * <code>string username = 1;</code>
    * @return The bytes for username.
    */
-  @java.lang.Override
+  @Override
   public com.google.protobuf.ByteString
       getUsernameBytes() {
-    java.lang.Object ref = username_;
-    if (ref instanceof java.lang.String) {
+    Object ref = username_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       username_ = b;
       return b;
     } else {
@@ -140,20 +140,20 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PASSWORD_FIELD_NUMBER = 2;
-  private volatile java.lang.Object password_;
+  private volatile Object password_;
   /**
    * <code>string password = 2;</code>
    * @return The password.
    */
-  @java.lang.Override
-  public java.lang.String getPassword() {
-    java.lang.Object ref = password_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  @Override
+  public String getPassword() {
+    Object ref = password_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       password_ = s;
       return s;
     }
@@ -162,14 +162,14 @@ private static final long serialVersionUID = 0L;
    * <code>string password = 2;</code>
    * @return The bytes for password.
    */
-  @java.lang.Override
+  @Override
   public com.google.protobuf.ByteString
       getPasswordBytes() {
-    java.lang.Object ref = password_;
-    if (ref instanceof java.lang.String) {
+    Object ref = password_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       password_ = b;
       return b;
     } else {
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMERAADDR_FIELD_NUMBER = 3;
-  private volatile java.lang.Object cameraAddr_;
+  private volatile Object cameraAddr_;
   /**
    * <pre>
    *摄像头地址
@@ -187,15 +187,15 @@ private static final long serialVersionUID = 0L;
    * <code>string cameraAddr = 3;</code>
    * @return The cameraAddr.
    */
-  @java.lang.Override
-  public java.lang.String getCameraAddr() {
-    java.lang.Object ref = cameraAddr_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  @Override
+  public String getCameraAddr() {
+    Object ref = cameraAddr_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       cameraAddr_ = s;
       return s;
     }
@@ -208,14 +208,14 @@ private static final long serialVersionUID = 0L;
    * <code>string cameraAddr = 3;</code>
    * @return The bytes for cameraAddr.
    */
-  @java.lang.Override
+  @Override
   public com.google.protobuf.ByteString
       getCameraAddrBytes() {
-    java.lang.Object ref = cameraAddr_;
-    if (ref instanceof java.lang.String) {
+    Object ref = cameraAddr_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       cameraAddr_ = b;
       return b;
     } else {
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
-  @java.lang.Override
+  @Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -234,7 +234,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @java.lang.Override
+  @Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getUsernameBytes().isEmpty()) {
@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
-  @java.lang.Override
+  @Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -269,15 +269,15 @@ private static final long serialVersionUID = 0L;
     return size;
   }
 
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.bdfint.base.sys.util.asuync.LoginInfo)) {
+    if (!(obj instanceof LoginInfo)) {
       return super.equals(obj);
     }
-    com.bdfint.base.sys.util.asuync.LoginInfo other = (com.bdfint.base.sys.util.asuync.LoginInfo) obj;
+    LoginInfo other = (LoginInfo) obj;
 
     if (!getUsername()
         .equals(other.getUsername())) return false;
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -307,69 +307,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseFrom(
+  public static LoginInfo parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseFrom(
+  public static LoginInfo parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseFrom(
+  public static LoginInfo parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseFrom(
+  public static LoginInfo parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseFrom(byte[] data)
+  public static LoginInfo parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseFrom(
+  public static LoginInfo parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseFrom(java.io.InputStream input)
+  public static LoginInfo parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseFrom(
+  public static LoginInfo parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseDelimitedFrom(java.io.InputStream input)
+  public static LoginInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseDelimitedFrom(
+  public static LoginInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseFrom(
+  public static LoginInfo parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.bdfint.base.sys.util.asuync.LoginInfo parseFrom(
+  public static LoginInfo parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -377,23 +377,23 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  @java.lang.Override
+  @Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.bdfint.base.sys.util.asuync.LoginInfo prototype) {
+  public static Builder newBuilder(LoginInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-  @java.lang.Override
+  @Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -403,18 +403,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:fgsb.LoginInfo)
-      com.bdfint.base.sys.util.asuync.LoginInfoOrBuilder {
+      LoginInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.bdfint.base.sys.util.asuync.CameraControlProto.internal_static_fgsb_LoginInfo_descriptor;
+      return CameraControlProto.internal_static_fgsb_LoginInfo_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.bdfint.base.sys.util.asuync.CameraControlProto.internal_static_fgsb_LoginInfo_fieldAccessorTable
+      return CameraControlProto.internal_static_fgsb_LoginInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.bdfint.base.sys.util.asuync.LoginInfo.class, com.bdfint.base.sys.util.asuync.LoginInfo.Builder.class);
+              LoginInfo.class, Builder.class);
     }
 
     // Construct using com.bdfint.base.sys.util.asuync.LoginInfo.newBuilder()
@@ -423,7 +423,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
-    @java.lang.Override
+    @Override
     public Builder clear() {
       super.clear();
       username_ = "";
@@ -444,29 +444,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.bdfint.base.sys.util.asuync.CameraControlProto.internal_static_fgsb_LoginInfo_descriptor;
+      return CameraControlProto.internal_static_fgsb_LoginInfo_descriptor;
     }
 
-    @java.lang.Override
-    public com.bdfint.base.sys.util.asuync.LoginInfo getDefaultInstanceForType() {
-      return com.bdfint.base.sys.util.asuync.LoginInfo.getDefaultInstance();
+    @Override
+    public LoginInfo getDefaultInstanceForType() {
+      return LoginInfo.getDefaultInstance();
     }
 
-    @java.lang.Override
-    public com.bdfint.base.sys.util.asuync.LoginInfo build() {
-      com.bdfint.base.sys.util.asuync.LoginInfo result = buildPartial();
+    @Override
+    public LoginInfo build() {
+      LoginInfo result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    @java.lang.Override
-    public com.bdfint.base.sys.util.asuync.LoginInfo buildPartial() {
-      com.bdfint.base.sys.util.asuync.LoginInfo result = new com.bdfint.base.sys.util.asuync.LoginInfo(this);
+    @Override
+    public LoginInfo buildPartial() {
+      LoginInfo result = new LoginInfo(this);
       result.username_ = username_;
       result.password_ = password_;
       result.cameraAddr_ = cameraAddr_;
@@ -474,50 +474,50 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public Builder clone() {
       return super.clone();
     }
-    @java.lang.Override
+    @Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        Object value) {
       return super.setField(field, value);
     }
-    @java.lang.Override
+    @Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-    @java.lang.Override
+    @Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-    @java.lang.Override
+    @Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        int index, Object value) {
       return super.setRepeatedField(field, index, value);
     }
-    @java.lang.Override
+    @Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        Object value) {
       return super.addRepeatedField(field, value);
     }
-    @java.lang.Override
+    @Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.bdfint.base.sys.util.asuync.LoginInfo) {
-        return mergeFrom((com.bdfint.base.sys.util.asuync.LoginInfo)other);
+      if (other instanceof LoginInfo) {
+        return mergeFrom((LoginInfo)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.bdfint.base.sys.util.asuync.LoginInfo other) {
-      if (other == com.bdfint.base.sys.util.asuync.LoginInfo.getDefaultInstance()) return this;
+    public Builder mergeFrom(LoginInfo other) {
+      if (other == LoginInfo.getDefaultInstance()) return this;
       if (!other.getUsername().isEmpty()) {
         username_ = other.username_;
         onChanged();
@@ -535,21 +535,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.bdfint.base.sys.util.asuync.LoginInfo parsedMessage = null;
+      LoginInfo parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.bdfint.base.sys.util.asuync.LoginInfo) e.getUnfinishedMessage();
+        parsedMessage = (LoginInfo) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -559,21 +559,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object username_ = "";
+    private Object username_ = "";
     /**
      * <code>string username = 1;</code>
      * @return The username.
      */
-    public java.lang.String getUsername() {
-      java.lang.Object ref = username_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getUsername() {
+      Object ref = username_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         username_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -582,11 +582,11 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ByteString
         getUsernameBytes() {
-      java.lang.Object ref = username_;
+      Object ref = username_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         username_ = b;
         return b;
       } else {
@@ -599,7 +599,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUsername(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -635,21 +635,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object password_ = "";
+    private Object password_ = "";
     /**
      * <code>string password = 2;</code>
      * @return The password.
      */
-    public java.lang.String getPassword() {
-      java.lang.Object ref = password_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getPassword() {
+      Object ref = password_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         password_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -658,11 +658,11 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      java.lang.Object ref = password_;
+      Object ref = password_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         password_ = b;
         return b;
       } else {
@@ -675,7 +675,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPassword(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -711,7 +711,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object cameraAddr_ = "";
+    private Object cameraAddr_ = "";
     /**
      * <pre>
      *摄像头地址
@@ -720,16 +720,16 @@ private static final long serialVersionUID = 0L;
      * <code>string cameraAddr = 3;</code>
      * @return The cameraAddr.
      */
-    public java.lang.String getCameraAddr() {
-      java.lang.Object ref = cameraAddr_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getCameraAddr() {
+      Object ref = cameraAddr_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         cameraAddr_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -742,11 +742,11 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ByteString
         getCameraAddrBytes() {
-      java.lang.Object ref = cameraAddr_;
+      Object ref = cameraAddr_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         cameraAddr_ = b;
         return b;
       } else {
@@ -763,7 +763,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCameraAddr(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -806,13 +806,13 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
-    @java.lang.Override
+    @Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
-    @java.lang.Override
+    @Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -823,18 +823,18 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:fgsb.LoginInfo)
-  private static final com.bdfint.base.sys.util.asuync.LoginInfo DEFAULT_INSTANCE;
+  private static final LoginInfo DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.bdfint.base.sys.util.asuync.LoginInfo();
+    DEFAULT_INSTANCE = new LoginInfo();
   }
 
-  public static com.bdfint.base.sys.util.asuync.LoginInfo getDefaultInstance() {
+  public static LoginInfo getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
   private static final com.google.protobuf.Parser<LoginInfo>
       PARSER = new com.google.protobuf.AbstractParser<LoginInfo>() {
-    @java.lang.Override
+    @Override
     public LoginInfo parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -847,13 +847,13 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<LoginInfo> getParserForType() {
     return PARSER;
   }
 
-  @java.lang.Override
-  public com.bdfint.base.sys.util.asuync.LoginInfo getDefaultInstanceForType() {
+  @Override
+  public LoginInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -17,7 +17,7 @@ public interface ResInfoOrBuilder extends
    * <code>string msg = 2;</code>
    * @return The msg.
    */
-  java.lang.String getMsg();
+  String getMsg();
   /**
    * <code>string msg = 2;</code>
    * @return The bytes for msg.
@@ -29,7 +29,7 @@ public interface ResInfoOrBuilder extends
    * <code>string token = 3;</code>
    * @return The token.
    */
-  java.lang.String getToken();
+  String getToken();
   /**
    * <code>string token = 3;</code>
    * @return The bytes for token.

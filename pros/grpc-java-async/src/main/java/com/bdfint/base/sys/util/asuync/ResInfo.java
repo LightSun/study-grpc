@@ -20,14 +20,14 @@ private static final long serialVersionUID = 0L;
     token_ = "";
   }
 
-  @java.lang.Override
+  @Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
+  protected Object newInstance(
       UnusedPrivateParameter unused) {
     return new ResInfo();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -38,7 +38,7 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException();
     }
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -56,13 +56,13 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             msg_ = s;
             break;
           }
           case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             token_ = s;
             break;
@@ -88,15 +88,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.bdfint.base.sys.util.asuync.CameraControlProto.internal_static_fgsb_ResInfo_descriptor;
+    return CameraControlProto.internal_static_fgsb_ResInfo_descriptor;
   }
 
-  @java.lang.Override
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  @Override
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.bdfint.base.sys.util.asuync.CameraControlProto.internal_static_fgsb_ResInfo_fieldAccessorTable
+    return CameraControlProto.internal_static_fgsb_ResInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.bdfint.base.sys.util.asuync.ResInfo.class, com.bdfint.base.sys.util.asuync.ResInfo.Builder.class);
+            ResInfo.class, Builder.class);
   }
 
   public static final int CODE_FIELD_NUMBER = 1;
@@ -105,26 +105,26 @@ private static final long serialVersionUID = 0L;
    * <code>int32 code = 1;</code>
    * @return The code.
    */
-  @java.lang.Override
+  @Override
   public int getCode() {
     return code_;
   }
 
   public static final int MSG_FIELD_NUMBER = 2;
-  private volatile java.lang.Object msg_;
+  private volatile Object msg_;
   /**
    * <code>string msg = 2;</code>
    * @return The msg.
    */
-  @java.lang.Override
-  public java.lang.String getMsg() {
-    java.lang.Object ref = msg_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  @Override
+  public String getMsg() {
+    Object ref = msg_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       msg_ = s;
       return s;
     }
@@ -133,14 +133,14 @@ private static final long serialVersionUID = 0L;
    * <code>string msg = 2;</code>
    * @return The bytes for msg.
    */
-  @java.lang.Override
+  @Override
   public com.google.protobuf.ByteString
       getMsgBytes() {
-    java.lang.Object ref = msg_;
-    if (ref instanceof java.lang.String) {
+    Object ref = msg_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       msg_ = b;
       return b;
     } else {
@@ -149,20 +149,20 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOKEN_FIELD_NUMBER = 3;
-  private volatile java.lang.Object token_;
+  private volatile Object token_;
   /**
    * <code>string token = 3;</code>
    * @return The token.
    */
-  @java.lang.Override
-  public java.lang.String getToken() {
-    java.lang.Object ref = token_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  @Override
+  public String getToken() {
+    Object ref = token_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       token_ = s;
       return s;
     }
@@ -171,14 +171,14 @@ private static final long serialVersionUID = 0L;
    * <code>string token = 3;</code>
    * @return The bytes for token.
    */
-  @java.lang.Override
+  @Override
   public com.google.protobuf.ByteString
       getTokenBytes() {
-    java.lang.Object ref = token_;
-    if (ref instanceof java.lang.String) {
+    Object ref = token_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       token_ = b;
       return b;
     } else {
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
-  @java.lang.Override
+  @Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -197,7 +197,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @java.lang.Override
+  @Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (code_ != 0) {
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
-  @java.lang.Override
+  @Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -233,15 +233,15 @@ private static final long serialVersionUID = 0L;
     return size;
   }
 
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.bdfint.base.sys.util.asuync.ResInfo)) {
+    if (!(obj instanceof ResInfo)) {
       return super.equals(obj);
     }
-    com.bdfint.base.sys.util.asuync.ResInfo other = (com.bdfint.base.sys.util.asuync.ResInfo) obj;
+    ResInfo other = (ResInfo) obj;
 
     if (getCode()
         != other.getCode()) return false;
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -271,69 +271,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseFrom(
+  public static ResInfo parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseFrom(
+  public static ResInfo parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseFrom(
+  public static ResInfo parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseFrom(
+  public static ResInfo parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseFrom(byte[] data)
+  public static ResInfo parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseFrom(
+  public static ResInfo parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseFrom(java.io.InputStream input)
+  public static ResInfo parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseFrom(
+  public static ResInfo parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseDelimitedFrom(java.io.InputStream input)
+  public static ResInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseDelimitedFrom(
+  public static ResInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseFrom(
+  public static ResInfo parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.bdfint.base.sys.util.asuync.ResInfo parseFrom(
+  public static ResInfo parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -341,23 +341,23 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  @java.lang.Override
+  @Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.bdfint.base.sys.util.asuync.ResInfo prototype) {
+  public static Builder newBuilder(ResInfo prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-  @java.lang.Override
+  @Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -367,18 +367,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:fgsb.ResInfo)
-      com.bdfint.base.sys.util.asuync.ResInfoOrBuilder {
+      ResInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.bdfint.base.sys.util.asuync.CameraControlProto.internal_static_fgsb_ResInfo_descriptor;
+      return CameraControlProto.internal_static_fgsb_ResInfo_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.bdfint.base.sys.util.asuync.CameraControlProto.internal_static_fgsb_ResInfo_fieldAccessorTable
+      return CameraControlProto.internal_static_fgsb_ResInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.bdfint.base.sys.util.asuync.ResInfo.class, com.bdfint.base.sys.util.asuync.ResInfo.Builder.class);
+              ResInfo.class, Builder.class);
     }
 
     // Construct using com.bdfint.base.sys.util.asuync.ResInfo.newBuilder()
@@ -387,7 +387,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -396,7 +396,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
-    @java.lang.Override
+    @Override
     public Builder clear() {
       super.clear();
       code_ = 0;
@@ -408,29 +408,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.bdfint.base.sys.util.asuync.CameraControlProto.internal_static_fgsb_ResInfo_descriptor;
+      return CameraControlProto.internal_static_fgsb_ResInfo_descriptor;
     }
 
-    @java.lang.Override
-    public com.bdfint.base.sys.util.asuync.ResInfo getDefaultInstanceForType() {
-      return com.bdfint.base.sys.util.asuync.ResInfo.getDefaultInstance();
+    @Override
+    public ResInfo getDefaultInstanceForType() {
+      return ResInfo.getDefaultInstance();
     }
 
-    @java.lang.Override
-    public com.bdfint.base.sys.util.asuync.ResInfo build() {
-      com.bdfint.base.sys.util.asuync.ResInfo result = buildPartial();
+    @Override
+    public ResInfo build() {
+      ResInfo result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    @java.lang.Override
-    public com.bdfint.base.sys.util.asuync.ResInfo buildPartial() {
-      com.bdfint.base.sys.util.asuync.ResInfo result = new com.bdfint.base.sys.util.asuync.ResInfo(this);
+    @Override
+    public ResInfo buildPartial() {
+      ResInfo result = new ResInfo(this);
       result.code_ = code_;
       result.msg_ = msg_;
       result.token_ = token_;
@@ -438,50 +438,50 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public Builder clone() {
       return super.clone();
     }
-    @java.lang.Override
+    @Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        Object value) {
       return super.setField(field, value);
     }
-    @java.lang.Override
+    @Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-    @java.lang.Override
+    @Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-    @java.lang.Override
+    @Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        int index, Object value) {
       return super.setRepeatedField(field, index, value);
     }
-    @java.lang.Override
+    @Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        Object value) {
       return super.addRepeatedField(field, value);
     }
-    @java.lang.Override
+    @Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.bdfint.base.sys.util.asuync.ResInfo) {
-        return mergeFrom((com.bdfint.base.sys.util.asuync.ResInfo)other);
+      if (other instanceof ResInfo) {
+        return mergeFrom((ResInfo)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.bdfint.base.sys.util.asuync.ResInfo other) {
-      if (other == com.bdfint.base.sys.util.asuync.ResInfo.getDefaultInstance()) return this;
+    public Builder mergeFrom(ResInfo other) {
+      if (other == ResInfo.getDefaultInstance()) return this;
       if (other.getCode() != 0) {
         setCode(other.getCode());
       }
@@ -498,21 +498,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.bdfint.base.sys.util.asuync.ResInfo parsedMessage = null;
+      ResInfo parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.bdfint.base.sys.util.asuync.ResInfo) e.getUnfinishedMessage();
+        parsedMessage = (ResInfo) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -527,7 +527,7 @@ private static final long serialVersionUID = 0L;
      * <code>int32 code = 1;</code>
      * @return The code.
      */
-    @java.lang.Override
+    @Override
     public int getCode() {
       return code_;
     }
@@ -553,21 +553,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object msg_ = "";
+    private Object msg_ = "";
     /**
      * <code>string msg = 2;</code>
      * @return The msg.
      */
-    public java.lang.String getMsg() {
-      java.lang.Object ref = msg_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getMsg() {
+      Object ref = msg_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         msg_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -576,11 +576,11 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ByteString
         getMsgBytes() {
-      java.lang.Object ref = msg_;
+      Object ref = msg_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         msg_ = b;
         return b;
       } else {
@@ -593,7 +593,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMsg(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -629,21 +629,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object token_ = "";
+    private Object token_ = "";
     /**
      * <code>string token = 3;</code>
      * @return The token.
      */
-    public java.lang.String getToken() {
-      java.lang.Object ref = token_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getToken() {
+      Object ref = token_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         token_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -652,11 +652,11 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ByteString
         getTokenBytes() {
-      java.lang.Object ref = token_;
+      Object ref = token_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         token_ = b;
         return b;
       } else {
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setToken(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -704,13 +704,13 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
-    @java.lang.Override
+    @Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
-    @java.lang.Override
+    @Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -721,18 +721,18 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:fgsb.ResInfo)
-  private static final com.bdfint.base.sys.util.asuync.ResInfo DEFAULT_INSTANCE;
+  private static final ResInfo DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.bdfint.base.sys.util.asuync.ResInfo();
+    DEFAULT_INSTANCE = new ResInfo();
   }
 
-  public static com.bdfint.base.sys.util.asuync.ResInfo getDefaultInstance() {
+  public static ResInfo getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
   private static final com.google.protobuf.Parser<ResInfo>
       PARSER = new com.google.protobuf.AbstractParser<ResInfo>() {
-    @java.lang.Override
+    @Override
     public ResInfo parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -745,13 +745,13 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<ResInfo> getParserForType() {
     return PARSER;
   }
 
-  @java.lang.Override
-  public com.bdfint.base.sys.util.asuync.ResInfo getDefaultInstanceForType() {
+  @Override
+  public ResInfo getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -11,7 +11,7 @@ public interface LoginInfoOrBuilder extends
    * <code>string username = 1;</code>
    * @return The username.
    */
-  java.lang.String getUsername();
+  String getUsername();
   /**
    * <code>string username = 1;</code>
    * @return The bytes for username.
@@ -23,7 +23,7 @@ public interface LoginInfoOrBuilder extends
    * <code>string password = 2;</code>
    * @return The password.
    */
-  java.lang.String getPassword();
+  String getPassword();
   /**
    * <code>string password = 2;</code>
    * @return The bytes for password.
@@ -39,7 +39,7 @@ public interface LoginInfoOrBuilder extends
    * <code>string cameraAddr = 3;</code>
    * @return The cameraAddr.
    */
-  java.lang.String getCameraAddr();
+  String getCameraAddr();
   /**
    * <pre>
    *摄像头地址

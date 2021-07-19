@@ -37,22 +37,24 @@ public final class CameraControlProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\023CameraControl.proto\022\004fgsb\"p\n\tSimpleReq" +
-      "\022\r\n\005token\030\001 \001(\t\022\014\n\004type\030\002 \001(\005\022\030\n\020unloadi" +
-      "ngPointId\030\003 \001(\t\022\030\n\020recognizeSheetId\030\004 \001(" +
-      "\t\022\022\n\ncameraAddr\030\005 \001(\t\"C\n\tLoginInfo\022\020\n\010us" +
-      "ername\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\022\n\ncamera" +
-      "Addr\030\003 \001(\t\"3\n\007ResInfo\022\014\n\004code\030\001 \001(\005\022\013\n\003m" +
-      "sg\030\002 \001(\t\022\r\n\005token\030\003 \001(\t*U\n\rSimpleReqType" +
-      "\022\r\n\tStart_PTZ\020\000\022\032\n\026Start_Sucker_Detectio" +
-      "n\020\001\022\031\n\025WARNING_LIGHT_SERVICE\020\002*B\n\tCodeSt" +
-      "ate\022\013\n\007SUCCESS\020\000\022\021\n\rTOKEN_INVALID\020\001\022\025\n\021A" +
-      "CCOUNT_PWD_ERROR\020\0022d\n\rCameraControl\022)\n\005L" +
-      "ogin\022\017.fgsb.LoginInfo\032\r.fgsb.ResInfo\"\000\022(" +
-      "\n\004Call\022\017.fgsb.SimpleReq\032\r.fgsb.ResInfo\"\000" +
-      "B<\n\037com.bdfint.base.sys.util.asuyncB\022Cam" +
-      "eraControlProtoP\001\242\002\002FGb\006proto3"
+    String[] descriptorData = {
+      "\n\023CameraControl.proto\022\004fgsb\"\205\001\n\tSimpleRe" +
+      "q\022\r\n\005token\030\001 \001(\t\022\014\n\004type\030\002 \001(\005\022\030\n\020unload" +
+      "ingPointId\030\003 \001(\t\022\030\n\020recognizeSheetId\030\004 \001" +
+      "(\t\022\022\n\ncameraAddr\030\005 \001(\t\022\023\n\013resetPreset\030\006 " +
+      "\001(\010\"C\n\tLoginInfo\022\020\n\010username\030\001 \001(\t\022\020\n\010pa" +
+      "ssword\030\002 \001(\t\022\022\n\ncameraAddr\030\003 \001(\t\"3\n\007ResI" +
+      "nfo\022\014\n\004code\030\001 \001(\005\022\013\n\003msg\030\002 \001(\t\022\r\n\005token\030" +
+      "\003 \001(\t*U\n\rSimpleReqType\022\r\n\tStart_PTZ\020\000\022\032\n" +
+      "\026Start_Sucker_Detection\020\001\022\031\n\025WARNING_LIG" +
+      "HT_SERVICE\020\002*B\n\tCodeState\022\013\n\007SUCCESS\020\000\022\021" +
+      "\n\rTOKEN_INVALID\020\001\022\025\n\021ACCOUNT_PWD_ERROR\020\002" +
+      "2\225\001\n\rCameraControl\022)\n\005Login\022\017.fgsb.Login" +
+      "Info\032\r.fgsb.ResInfo\"\000\022(\n\004Call\022\017.fgsb.Sim" +
+      "pleReq\032\r.fgsb.ResInfo\"\000\022/\n\013StopService\022\017" +
+      ".fgsb.SimpleReq\032\r.fgsb.ResInfo\"\000B<\n\037com." +
+      "bdfint.base.sys.util.asuyncB\022CameraContr" +
+      "olProtoP\001\242\002\002FGb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -63,19 +65,19 @@ public final class CameraControlProto {
     internal_static_fgsb_SimpleReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_fgsb_SimpleReq_descriptor,
-        new java.lang.String[] { "Token", "Type", "UnloadingPointId", "RecognizeSheetId", "CameraAddr", });
+        new String[] { "Token", "Type", "UnloadingPointId", "RecognizeSheetId", "CameraAddr", "ResetPreset", });
     internal_static_fgsb_LoginInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_fgsb_LoginInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_fgsb_LoginInfo_descriptor,
-        new java.lang.String[] { "Username", "Password", "CameraAddr", });
+        new String[] { "Username", "Password", "CameraAddr", });
     internal_static_fgsb_ResInfo_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_fgsb_ResInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_fgsb_ResInfo_descriptor,
-        new java.lang.String[] { "Code", "Msg", "Token", });
+        new String[] { "Code", "Msg", "Token", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -11,7 +11,7 @@ public interface SimpleReqOrBuilder extends
    * <code>string token = 1;</code>
    * @return The token.
    */
-  java.lang.String getToken();
+  String getToken();
   /**
    * <code>string token = 1;</code>
    * @return The bytes for token.
@@ -33,7 +33,7 @@ public interface SimpleReqOrBuilder extends
    * <code>string unloadingPointId = 3;</code>
    * @return The unloadingPointId.
    */
-  java.lang.String getUnloadingPointId();
+  String getUnloadingPointId();
   /**
    * <pre>
    *卸料点id
@@ -53,7 +53,7 @@ public interface SimpleReqOrBuilder extends
    * <code>string recognizeSheetId = 4;</code>
    * @return The recognizeSheetId.
    */
-  java.lang.String getRecognizeSheetId();
+  String getRecognizeSheetId();
   /**
    * <pre>
    *识别单id
@@ -73,7 +73,7 @@ public interface SimpleReqOrBuilder extends
    * <code>string cameraAddr = 5;</code>
    * @return The cameraAddr.
    */
-  java.lang.String getCameraAddr();
+  String getCameraAddr();
   /**
    * <pre>
    *摄像头地址
@@ -84,4 +84,14 @@ public interface SimpleReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCameraAddrBytes();
+
+  /**
+   * <pre>
+   *预制点是否从最初开始	
+   * </pre>
+   *
+   * <code>bool resetPreset = 6;</code>
+   * @return The resetPreset.
+   */
+  boolean getResetPreset();
 }
