@@ -12,7 +12,7 @@ public class CameraControlTest {
 
     public static void main(String[] args) throws InterruptedException {
         //CameraControlClient client = new CameraControlClient("127.0.0.1", 38657);
-        CameraControlClient client = new CameraControlClient("server.natappfree.cc",44197);
+        CameraControlClient client = new CameraControlClient("server.natappfree.cc",41248);
         try {
           //  client.login();
             client.call(SimpleReqType.Start_PTZ_VALUE);
@@ -87,7 +87,7 @@ public class CameraControlTest {
             }
             SimpleReq req = SimpleReq.newBuilder()
                     .setType(type)
-                    .setToken(token)
+                    //.setToken(token)
                     .setRecognizeSheetId("---")  //识别单id
                     .setUnloadingPointId("xxx")  //卸料点id
                     .setCameraAddr("21")
