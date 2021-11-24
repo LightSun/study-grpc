@@ -9,10 +9,11 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 public class CameraControlTest {
+    static String CAMERA_ADDR = "22";
 
     public static void main(String[] args) throws InterruptedException {
         //CameraControlClient client = new CameraControlClient("127.0.0.1", 38657);
-        CameraControlClient client = new CameraControlClient("server.natappfree.cc",41248);
+        CameraControlClient client = new CameraControlClient("16a17a1dde162710.natapp.cc",50051);
         try {
           //  client.login();
             client.call(SimpleReqType.Start_PTZ_VALUE);
@@ -90,7 +91,7 @@ public class CameraControlTest {
                     //.setToken(token)
                     .setRecognizeSheetId("---")  //识别单id
                     .setUnloadingPointId("xxx")  //卸料点id
-                    .setCameraAddr("21")
+                    .setCameraAddr(CAMERA_ADDR)
                     .build();
             ResInfo res;
             try {
