@@ -102,18 +102,18 @@ public final class ServerStreamManager {
             OnReadyHandler mReadHandler = new OnReadyHandler(resObserver);
             resObserver.disableAutoRequest();
             resObserver.setOnReadyHandler(mReadHandler);
-            resObserver.setOnCancelHandler(new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println("server --- received cancel.");
-                }
-            });
-            resObserver.setOnCloseHandler(new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println("server --- received close.");
-                }
-            });
+//            resObserver.setOnCancelHandler(new Runnable() {
+//                @Override
+//                public void run() {
+//                    System.out.println("server --- received cancel.");
+//                }
+//            });
+//            resObserver.setOnCloseHandler(new Runnable() {
+//                @Override
+//                public void run() {
+//                    System.out.println("server --- received close.");
+//                }
+//            });
             return new ReqObserver(resObserver, mReadHandler);
         }
     };
