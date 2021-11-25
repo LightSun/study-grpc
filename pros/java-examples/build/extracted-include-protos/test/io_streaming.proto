@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.bdfint.fgsb.terminal";
+option java_outer_classname = "IOMsgStreamingProto";
+option objc_class_prefix = "Fgsb";
+
+package com.bdfint.fgsb.terminal;
+
+
+service IOStreaming {
+  rpc reqStreaming (stream ReqMessage) returns (stream ResMessage) {}
+}
+
+message ReqMessage{
+  int32 type = 1;
+  string data = 2;
+}
+
+message ResMessage {
+  int32 type = 1;
+  int32 code = 2;
+  string msg = 3;
+  string data = 4;
+}
