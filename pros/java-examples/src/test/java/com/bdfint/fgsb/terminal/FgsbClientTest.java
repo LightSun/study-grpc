@@ -16,17 +16,18 @@ public class FgsbClientTest {
             int count;
             @Override
             public void run() {
-                while (count < 5){
-                    manager.addMessage(ReqMessage.newBuilder().setType(count).setData("client data__" + count).build());
-                    count ++;
-                    try {
-                        Thread.sleep(2000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-                System.out.println("client: all msg is done.");
-                manager.end();
+                manager.addMessage(ReqMessage.newBuilder().setType(count).setData("client data__" + count).build());
+//                while (count < 5){
+//                    manager.addMessage(ReqMessage.newBuilder().setType(count).setData("client data__" + count).build());
+//                    count ++;
+//                    try {
+//                        Thread.sleep(2000);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//                System.out.println("client: all msg is done.");
+               // manager.end();
             }
         }).start();
         try {
