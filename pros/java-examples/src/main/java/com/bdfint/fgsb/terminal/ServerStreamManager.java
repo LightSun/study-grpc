@@ -196,12 +196,12 @@ public final class ServerStreamManager {
         @Override
         public void onError(Throwable e) {
             logger.info("server >>> onError");
+            mObserver.onCompleted();
             if(mExceptionProcessor != null){
                 mExceptionProcessor.process(e);
             }else{
                 e.printStackTrace();
             }
-            mObserver.onCompleted();
         }
         @Override
         public void onCompleted() {

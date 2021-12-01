@@ -23,6 +23,11 @@ public final class FgsbServerTest {
             int count;
             @Override
             public void run() {
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 while (count < 5){
                     manager.addMessage(ResMessage.newBuilder().setCode(count).setMsg("server_msg__" + count).build());
                     count ++;
@@ -35,6 +40,17 @@ public final class FgsbServerTest {
                 System.out.println("server: all msg is done.");
             }
         }).start();
+        manager.setExceptionProcessor(new ServerStreamManager.ExceptionProcessor() {
+            @Override
+            public void process(Throwable e) {
+                manager.end();
+                manager.reset();
+                start(manager);
+            }
+        });
+        start(manager);
+    }
+    private static void start(ServerStreamManager manager){
         try {
             manager.start(PORT);
         } catch (IOException e) {
