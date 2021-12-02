@@ -108,7 +108,6 @@ public final class ServerStreamManager {
         return userSpace;
     }
     public static class UserSpace{
-        private final LinkedList<ResMessage> mStack = new LinkedList<>();
         private final AtomicBoolean mCanceled = new AtomicBoolean(false);
         private ReqProcessor mProcessor;
         private Scheduler mScheduler;
@@ -125,11 +124,6 @@ public final class ServerStreamManager {
 
         public void end(){
             if(mCanceled.compareAndSet(false, true)){
-                //mObserver.onCompleted();
-
-                synchronized (this){
-                    notify();
-                }
                 synchronized (mParent.mUsers){
                     mParent.mUsers.remove(this);
                 }
