@@ -29,16 +29,21 @@ public final class FgsbServerTest {
                     e.printStackTrace();
                 }
                 System.out.println("--------- server start send message --------");
-                while (count < 3){
+                while (count < 5){
                     System.out.println("server-send-message: " + count);
                     manager.addMessage(ResMessage.newBuilder().setCode(count).setMsg("server_msg__" + count).build());
                     count ++;
                     try {
-                        Thread.sleep(2000);
+                        Thread.sleep(15000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
+//                try {
+//                    Thread.sleep(30000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
                 System.out.println("server: all msg is done.");
             }
         }).start();

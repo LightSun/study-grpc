@@ -6,6 +6,7 @@ com/bdfint/fgsb/terminal/FgsbServerTest.java
  com.bdfint.fgsb.terminal.FgsbServerTest$1
  com.bdfint.fgsb.terminal.FgsbServerTest$2
  com.bdfint.fgsb.terminal.FgsbServerTest$3
+ com.bdfint.fgsb.terminal.FgsbServerTest$4
 io/grpc/examples/routeguide/RouteGuideServerTest.java
  io.grpc.examples.routeguide.RouteGuideServerTest
  io.grpc.examples.routeguide.RouteGuideServerTest$1

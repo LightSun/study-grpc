@@ -10,6 +10,7 @@
   <name>examples</name>
   <url>https://github.com/grpc/grpc-java</url>
 
+  <!-- -->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <grpc.version>1.42.1</grpc.version><!-- CURRENT_GRPC_VERSION -->

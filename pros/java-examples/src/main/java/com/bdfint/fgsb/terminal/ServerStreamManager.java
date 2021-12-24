@@ -8,7 +8,6 @@ import io.grpc.stub.StreamObserver;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -254,6 +253,7 @@ public final class ServerStreamManager {
         public void onCompleted() {
             sLogger.info("server >>> onCompleted");
             mObserver.onCompleted();
+            userSpace.end();
         }
     }
 

@@ -16,12 +16,36 @@ public final class ClientStreamManager {
 
     public boolean end(){
         if(mCanceled.compareAndSet(false, true)){
+            synchronized (this){
+                this.notify();
+            }
             if(mStreamObserver != null){
                 mStreamObserver.onCompleted();
-                return true;
             }
         }
+        synchronized (mStack){
+            mStack.clear();
+        }
+        mStarted.set(false);
         return false;
+    }
+
+    public void startAsync(String addr, int port){
+        if(!mStarted.compareAndSet(false, true)){
+            System.err.println("ClientStreamManager: already started.");
+            return;
+        }
+        mCanceled.set(false);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    start(addr, port);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
     //addr like: localhost
     public void start(String addr, int port) throws InterruptedException {
@@ -39,6 +63,7 @@ public final class ClientStreamManager {
         channel.awaitTermination(1, TimeUnit.SECONDS);
     }
 
+
     public void setResProcessor(ResProcessor mResProcessor) {
         this.mResProcessor = mResProcessor;
     }
@@ -51,14 +76,24 @@ public final class ClientStreamManager {
             this.notify();
         }
     }
+    public boolean isStarted(){
+        return mStarted.get();
+    }
     public void reset(){
         mCanceled.set(false);
     }
-
+    public void setOnErrorListener(OnErrorListener l){
+        this.mOnErrorL = l;
+    }
+    //---------------------------
     private final AtomicBoolean mCanceled = new AtomicBoolean(false);
+    private final AtomicBoolean mStarted = new AtomicBoolean(false);
+
     private ResProcessor mResProcessor;
     private ClientCallStreamObserver<ReqMessage> mStreamObserver;
     private final LinkedList<ReqMessage> mStack = new LinkedList<>();
+    private OnErrorListener mOnErrorL;
+
 
     private class ClientResponseObserveImpl implements ClientResponseObserver<ReqMessage, ResMessage> {
         final CountDownLatch countDownLatch;
@@ -70,6 +105,7 @@ public final class ClientStreamManager {
         @Override
         public void beforeStart(ClientCallStreamObserver<ReqMessage> requestStream) {
             System.out.println(" client >>> beforeStart --- ");
+            //Logger.d(TAG, "observer = " + requestStream);
             mStreamObserver = requestStream;
             requestStream.disableAutoRequestWithInitial(1);
             requestStream.setOnReadyHandler(new ReadHandler());
@@ -89,8 +125,13 @@ public final class ClientStreamManager {
 
         @Override
         public void onError(Throwable t) {
+            System.err.println(TAG + " >> onError");
             t.printStackTrace();
+            end();
             countDownLatch.countDown();
+            if(mOnErrorL != null){
+                mOnErrorL.onError(t);
+            }
         }
         @Override
         public void onCompleted() {
@@ -113,6 +154,7 @@ public final class ClientStreamManager {
                             }
                             if(req != null){
                                 mStreamObserver.onNext(req);
+                                System.out.println("--- send message ok.");
                             }else {
                                 System.out.println(TAG + " >>> no msg. wait for new msg.");
                                 synchronized (ClientStreamManager.this){
@@ -129,5 +171,8 @@ public final class ClientStreamManager {
     }
     public interface ResProcessor{
         ReqMessage process(ResMessage msg);
+    }
+    public interface OnErrorListener{
+        void onError(Throwable e);
     }
 }
