@@ -243,6 +243,7 @@ public final class ServerStreamManager {
         public void onError(Throwable e) {
             sLogger.info("server >>> onError");
             mObserver.onCompleted();
+            userSpace.end();
             if(userSpace.mExceptionProcessor != null){
                 userSpace.mExceptionProcessor.process(userSpace, e);
             }else{

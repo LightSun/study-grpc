@@ -50,7 +50,6 @@ public final class FgsbServerTest {
         manager.setExceptionProcessor(new ServerStreamManager.ExceptionProcessor() {
             @Override
             public void process(ServerStreamManager.UserSpace us, Throwable e) {
-                us.end();
             }
         });
         start(manager);

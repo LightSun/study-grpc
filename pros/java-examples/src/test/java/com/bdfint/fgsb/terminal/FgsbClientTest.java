@@ -16,7 +16,7 @@ public class FgsbClientTest {
             int count;
             @Override
             public void run() {
-                manager.addMessage(ReqMessage.newBuilder().setType(count).setData("client data__" + count).build());
+                manager.addMessage(ReqMessage.newBuilder().setType(1).setData("client data__" + count).build());
 //                while (count < 5){
 //                    manager.addMessage(ReqMessage.newBuilder().setType(count).setData("client data__" + count).build());
 //                    count ++;
@@ -31,7 +31,8 @@ public class FgsbClientTest {
             }
         }).start();
         try {
-            manager.start("localhost", FgsbServerTest.PORT);
+           // manager.start("localhost", FgsbServerTest.PORT);
+            manager.start("47.94.70.112", 31358);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
